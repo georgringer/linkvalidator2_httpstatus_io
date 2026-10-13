@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  GeorgRinger\Linkvalidator2HttpstatusIo\:
+    resource: '../Classes/*'
+
+  # Asked after the own check (ExternalUrlChecker, priority 0) and only if it could not decide
+  GeorgRinger\Linkvalidator2HttpstatusIo\Check\HttpStatusIoChecker:
+    # Not autoconfigured, that would add the tag a second time without the priority
+    autoconfigure: false
+    tags:
+      - name: 'linkvalidator2.checker'
+        priority: -100

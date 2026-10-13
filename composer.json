@@ -1,0 +1,39 @@
+{
+	"name": "georgringer/linkvalidator2-httpstatus-io",
+	"type": "typo3-cms-extension",
+	"description": "Experimental: lets linkvalidator2 ask the httpstatus.io API about external URLs the own request could not decide.",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"authors": [
+		{
+			"name": "Georg Ringer",
+			"email": "mail@ringer.it"
+		}
+	],
+	"require": {
+		"php": ">= 8.5 < 8.6",
+		"georgringer/linkvalidator2": "*",
+		"typo3/cms-core": "^14.3 || 15.0.*@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"GeorgRinger\\Linkvalidator2HttpstatusIo\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"GeorgRinger\\Linkvalidator2HttpstatusIo\\Tests\\": "Tests/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "linkvalidator2_httpstatus_io",
+			"version": "0.1.0",
+			"web-dir": ".Build/Web",
+			"Package": {
+				"providesPackages": {}
+			}
+		}
+	}
+}

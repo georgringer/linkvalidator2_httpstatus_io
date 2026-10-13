@@ -1,0 +1,11 @@
+# cat=basic; type=string; label=Access key: Sent in the header "X-Billing-Token" of every request. Without it the checker is skipped
+accessKey =
+
+# cat=basic; type=string; label=User agent: Preset of httpstatus.io the request is sent with (browser, chrome, firefox, safari, googlebot-desktop, ...) or "default" to identify as HttpStatus
+userAgent = chrome
+
+# cat=basic; type=int+; label=Timeout (seconds): Total time allowed per request to the API
+timeout = 20
+
+# cat=basic; type=int+; label=Cache lifetime (hours): How long an answer of the API is reused. Stored in var/statuscode_io/, flushing the caches does not remove it
+cacheLifetime = 168
